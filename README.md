@@ -1,8 +1,83 @@
 # Nyaya Skills
 
-Reusable skills for AI research scientists, imported into TrueForge and used
-through Nyaya. Start with a small, verifiable research workflow before expanding
-into experiment design, reproducibility checks and research reporting.
+Reusable procedures for description, evidence-grounded inquiry and knowledge
+engineering. TrueForge loads the skills; Nyaya orchestrates agents using them;
+applications supply domain meaning, authorization and publication policy.
+
+## Dialogical and knowledge-engineering skills
+
+| Skill | Responsibility |
+| --- | --- |
+| `vada-samvada` | Adaptive proposer–examiner turn-taking, objections, resolution and stopping |
+| `vaisheshika-description` | Entities, properties, relationships, identity and context |
+| `nyaya-examination` | Evidence, inference, counterexamples and justified judgments |
+| `evidence-grounding` | Claim-level source references and exact quotations |
+| `draft-refinement` | Traceable revisions without concealing disagreement |
+| `rdf-formalization` | Examined meaning → RDF/schema/constraints with semantic round-trip |
+| `fact-extraction` | Source assertions → facts against approved vocabulary and identities |
+| `query-compilation` | Natural language → grounded read-only query → explanation of actual results |
+
+The first three distinguish the exchange protocol, the descriptive lens and the
+epistemic/reasoning lens. They are computational adaptations, not historical
+identity claims or a new formal logic. Description and reasoning can be combined.
+Propose ↔ examine ↔ formalize is iterative; formalized is not validated or
+published. The application retains those gates.
+
+Every skill defines purpose, inputs, an adaptive question bank, a method, expected
+results, mandatory acceptance gates and feedback/stopping boundaries. Weighted
+quality can complement—but never replace—mandatory gates. Unknown evidence is
+not a pass. Skills are reusable instructions, not permissions or proof.
+
+`catalog.json` lists these eight skills. Each selected skill folder is
+self-contained; no sibling skill is required just to load it. The original
+research skill below remains a separate smoke-test pack.
+
+## Pinned import through Nyaya
+
+With a Nyaya checkout containing `nyaya.skillpacks`, run from that checkout:
+
+```sh
+SKILLS_REF=$(git -C ../nyaya-skills rev-parse HEAD)
+.venv/bin/python -m nyaya.skillpacks build ../nyaya-skills --ref "$SKILLS_REF" --output /tmp/nyaya-thinking-skills.json
+.venv/bin/python -m nyaya.skillpacks list /tmp/nyaya-thinking-skills.json
+.venv/bin/python -m nyaya.skillpacks register /tmp/nyaya-thinking-skills.json
+.venv/bin/python -m nyaya.skillpacks check /tmp/nyaya-thinking-skills.json
+```
+
+Build reads committed Git objects, not unreviewed working-tree edits. Registration
+uses TrueForge's settings API and requires its settings/admin access. Names carry
+the source commit suffix; an existing differing manifest is never overwritten.
+A failed/uncertain write is not retried automatically. Registration is not evidence
+of runtime skill loading.
+
+The `list` output provides exact `registration_name` values. In Nyaya, choose a
+configured sandbox environment and attach the desired registered skill names:
+
+```sh
+nyaya chat --no-tools --sandbox-environment YOUR_CONFIGURED_ENVIRONMENT --remote-skill EXACT_REGISTRATION_NAME
+```
+
+You may repeat `--remote-skill` to combine procedures. Request the exact skill
+explicitly in your prompt when testing it; merely attaching it does not force its
+use. Mandatory skill responsibilities also belong in the host workflow contract.
+See [the synthetic Person dialogue](examples/person-dialogue.md) for prompts and
+expected behavior across description, examination, formalization, facts and queries.
+
+For manual TrueForge import, choose this repository, a skill's path from the
+catalog and an exact commit ref. See below for the research smoke-test example.
+
+## Rubric helper
+
+```sh
+python3 skills/vada-samvada/scripts/judge.py --input skills/vada-samvada/references/example-rubric.json
+```
+
+Expected: `graduate`, with weighted quality about 88.33. Changing a mandatory
+assessment to fail produces `revise`, regardless of the quality score. Missing
+evidence produces `clarify`; exhausting the supplied turn budget without
+acceptance produces `escalate`. This helper aggregates judgments; it cannot verify
+whether the supplied evidence references or assessments are actually correct.
+The host must enforce real budgets, permissions and evidence checks.
 
 ## First skill: research-result-check
 

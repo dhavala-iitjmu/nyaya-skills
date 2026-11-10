@@ -1,0 +1,61 @@
+{
+  "format": "nyaya-skills-catalog-v1",
+  "skills": [
+    {
+      "name": "vada-samvada",
+      "path": "skills/vada-samvada",
+      "family": "dialogue",
+      "version": "1",
+      "description": "Conduct bounded, constructive proposer\u2013examiner dialogue with explicit questions, evidence, objections and graduation criteria."
+    },
+    {
+      "name": "vaisheshika-description",
+      "path": "skills/vaisheshika-description",
+      "family": "description",
+      "version": "1",
+      "description": "Develop precise descriptions of entities, properties, relationships, identity and context before formal encoding."
+    },
+    {
+      "name": "nyaya-examination",
+      "path": "skills/nyaya-examination",
+      "family": "reasoning",
+      "version": "1",
+      "description": "Examine claims, evidence and inference using targeted questions, counterexamples and an explicit acceptance rubric."
+    },
+    {
+      "name": "evidence-grounding",
+      "path": "skills/evidence-grounding",
+      "family": "reasoning",
+      "version": "1",
+      "description": "Link individual claims to exact source evidence while distinguishing source statements, observations, inference and verification."
+    },
+    {
+      "name": "draft-refinement",
+      "path": "skills/draft-refinement",
+      "family": "description",
+      "version": "1",
+      "description": "Revise a shared draft in response to justified objections and human feedback without hiding unresolved disagreement."
+    },
+    {
+      "name": "rdf-formalization",
+      "path": "skills/rdf-formalization",
+      "family": "formalization",
+      "version": "1",
+      "description": "Encode examined meanings as RDF facts, ontology or constraints with a semantic round-trip explanation and explicit formalism boundaries."
+    },
+    {
+      "name": "fact-extraction",
+      "path": "skills/fact-extraction",
+      "family": "population",
+      "version": "1",
+      "description": "Extract source-grounded entity and relation assertions against an approved ontology without silently changing schema or identity."
+    },
+    {
+      "name": "query-compilation",
+      "path": "skills/query-compilation",
+      "family": "query",
+      "version": "1",
+      "description": "Translate a natural-language question into an authorized query grounded in the actual ontology and entity bindings, then explain supplied execution results."
+    }
+  ]
+}

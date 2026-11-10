@@ -1,0 +1,16 @@
+{
+  "criteria": [
+    {"id": "identity", "mandatory": true},
+    {"id": "no-critical-contradiction", "mandatory": true},
+    {"id": "example-coverage", "weight": 2},
+    {"id": "clarity", "weight": 1}
+  ],
+  "assessments": [
+    {"id": "identity", "status": "pass", "reason": "Entity and label are distinguished in revision 2.", "evidence": ["draft:r2:C1"]},
+    {"id": "no-critical-contradiction", "status": "pass", "reason": "Examiner resolved objection O1 without changing the accepted scope.", "evidence": ["review:r2:O1"]},
+    {"id": "example-coverage", "status": "pass", "score": 90, "reason": "Reviewed positive, negative and unknown cases are covered.", "evidence": ["examples:r2"]},
+    {"id": "clarity", "status": "pass", "score": 85, "reason": "Definitions use agreed vocabulary.", "evidence": ["draft:r2"]}
+  ],
+  "threshold": 80,
+  "remaining_turns": 2
+}
