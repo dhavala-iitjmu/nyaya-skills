@@ -6,6 +6,18 @@ Nyaya-inspired examination supplies an epistemic/reasoning lens; vāda–saṃv�
 organizes the exchange. Applications and domain experts supply actual content.
 These are computational adaptations, not historical equivalence or a new logic.
 
+The version-2 Nyāya and Vaiśeṣika methods make those connections operational:
+Nyāya reconstructs the knowledge source and inferential warrant; Vaiśeṣika
+distinguishes categories, dependence relations and qualified absence. Each includes
+historical sources, explicit engineering limits, and contrasting worked cases.
+
+An agent can select one or several such **illuminations** for the current task,
+apply a brief self-review, solicit separately instantiated advisers, or act directly
+when the work is straightforward. Selecting a method does not create a new runtime
+mind or independent evidence. The host owns adviser spawning, message topology,
+bounded reflection episodes and final disposition; the skill owns its method.
+These files do not implement an all-to-all or host-coordinated messaging protocol.
+
 | Skill | Family | Examples |
 | --- | --- | --- |
 | [vada-samvada](vada-samvada/SKILL.md) | dialogue | [Person example](vada-samvada/examples/person-dialogue.md) |

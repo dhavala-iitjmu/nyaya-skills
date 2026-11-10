@@ -1,0 +1,24 @@
+{
+  "format": "nyaya-method-probes-v1",
+  "cases": [
+    {
+      "id": "categories",
+      "prompt": "A particular blue cup touches a desk and is moved. The inventory records a UUID for it. In answers give color_category, movement_category and cup_desk_relation, using plain ASCII Sanskrit names, plus uuid_is_literal_visesa (boolean). Explain particular/universal and historical/engineering limits in rationale.",
+      "expected_answers": {
+        "color_category": "guna",
+        "movement_category": "karma",
+        "cup_desk_relation": "samyoga",
+        "uuid_is_literal_visesa": false
+      }
+    },
+    {
+      "id": "encoding-and-absence",
+      "prompt": "An incomplete inventory query returns no cups. A designer concludes no cup exists anywhere and says any foreign key is samavaya and any UUID is visesa. Return answers with world_absence_established, foreign_key_alone_establishes_inherence, and uuid_is_ultimate_particularity (all booleans). In rationale specify what qualifications an absence claim needs, and distinguish historical categories from engineering analogies.",
+      "expected_answers": {
+        "world_absence_established": false,
+        "foreign_key_alone_establishes_inherence": false,
+        "uuid_is_ultimate_particularity": false
+      }
+    }
+  ]
+}

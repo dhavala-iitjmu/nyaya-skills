@@ -13,16 +13,16 @@
       "name": "vaisheshika-description",
       "path": "ke/vaisheshika-description",
       "family": "description",
-      "version": "1",
-      "description": "Develop precise descriptions of entities, properties, relationships, identity and context before formal encoding.",
+      "version": "2",
+      "description": "Analyze domain descriptions using Vaisesika distinctions among bearers, qualities, motion, universals, individuality, inherence and qualified absence. Use for conceptual modeling and category mistakes before formal encoding.",
       "category": "ke"
     },
     {
       "name": "nyaya-examination",
       "path": "ke/nyaya-examination",
       "family": "reasoning",
-      "version": "1",
-      "description": "Examine claims, evidence and inference using targeted questions, counterexamples and an explicit acceptance rubric.",
+      "version": "2",
+      "description": "Examine contested claims using Nyaya knowledge-source distinctions, inference reconstruction, defeater checks and reasoned resolution. Use for consequential uncertainty or argument review, including an agent's self-review.",
       "category": "ke"
     },
     {

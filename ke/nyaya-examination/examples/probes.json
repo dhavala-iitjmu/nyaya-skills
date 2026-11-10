@@ -1,0 +1,22 @@
+{
+  "format": "nyaya-method-probes-v1",
+  "cases": [
+    {
+      "id": "scope",
+      "prompt": "Trusted supplied measurements establish a candidate has MAE .4 and baseline .5 on one validation split. No other evaluations exist. The proposer claims improvement on every deployment. Return answers with booleans scoped_improvement_established and universal_improvement_established, and name the subject, target, reason and missing inferential warrant in rationale.",
+      "expected_answers": {
+        "scoped_improvement_established": true,
+        "universal_improvement_established": false
+      }
+    },
+    {
+      "id": "source-chain",
+      "prompt": "Three reviewing agents assert this system is safe. All merely quote the same unverified blog, whose author and evidence are unknown. Return answers with independent_source_chains (integer), agents_directly_observed_external_safety (boolean), and safety_established (boolean). Explain the applicable knowledge-source distinction and disposition in rationale.",
+      "expected_answers": {
+        "independent_source_chains": 1,
+        "agents_directly_observed_external_safety": false,
+        "safety_established": false
+      }
+    }
+  ]
+}

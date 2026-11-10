@@ -9,6 +9,12 @@ The skills cover knowledge engineering and research workflows. TrueForge loads
 selected `SKILL.md` packs; Nyaya composes their methods into agents and workflows.
 Applications supply domain meaning, authorized tools and publication policy.
 
+Nyāya examination and Vaiśeṣika description now include discipline-specific
+knowledge-source/inference checks and categorical/dependence analysis, with
+historical sources and explicit computational limits. They can be selected as
+reasoning illuminations or combined within an agent; internal agreement is not
+independent corroboration. See the [knowledge-engineering methods](ke/README.md).
+
 ## Categories
 
 | Category | Contents |
@@ -58,5 +64,22 @@ python3 research/research-result-check/scripts/summarize_results.py --input rese
 The helpers use only Python's standard library. They evaluate supplied inputs,
 not the factual truth of evidence or live model quality. Live TrueForge loading
 and agent behavior remain separate acceptance checks.
+
+For an opt-in behavioral check of the two philosophical methods, use a Nyaya
+environment with access to a configured TrueForge model:
+
+```sh
+nyaya run /absolute/path/to/nyaya-skills/tests/probe_methods.py --model openai/chat-latest
+```
+
+This registers two content-versioned probe agents and makes four model turns,
+using synthetic cases and no connectors. It checks source-chain independence,
+generalization limits, category distinctions and false ontological mappings.
+Expected answers are evaluated locally rather than sent to the model. Inspect the
+saved rationales as well as pass flags. Results go to Git-ignored `output/` by
+default; `--output PATH` overrides that. It tests inline `SKILL.md` snapshots,
+not native progressive loading, bundled helper execution or historical scholarship.
+Passing a few structured probes is not a benchmark gain or evidence that the
+skills caused behavior beyond the model's existing knowledge.
 
 MIT licensed. See [LICENSE](LICENSE).
