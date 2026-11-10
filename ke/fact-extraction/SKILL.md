@@ -53,3 +53,7 @@ Evaluate each applicable gate as pass, fail or unknown, recording reasons and ev
 Return graduate only when the declared gates pass; otherwise return a focused revision or clarification request. Stop/escalate on a host budget/deadline, cancellation, persistent disagreement or lack of progress. Do not reset global budgets or claim this Markdown enforces runtime limits. Human authority and L0–L4 delegation come from the host, not this skill. No approval, publication, privilege change or self-modification is authorized here. Do not require a debate for a trivial deterministic operation.
 
 A human acceptance may count as verification when the application explicitly defines that policy; the extractor must not manufacture such acceptance.
+
+## Examples
+
+[Skill-specific Person example](examples/person.md).

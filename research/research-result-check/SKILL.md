@@ -66,3 +66,7 @@ interval. Do not call a standard deviation a standard error or confidence interv
 Return the actual artifact paths and execution status. Keep any supplied data
 and generated files in the authorized output location; this skill does not
 require downloads, training, external services or extra packages.
+
+## Examples
+
+[Synthetic paired measurements](examples/smoke-test.json).

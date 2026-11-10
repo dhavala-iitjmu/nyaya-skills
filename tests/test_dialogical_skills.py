@@ -4,7 +4,7 @@ from pathlib import Path
 import unittest
 
 ROOT=Path(__file__).resolve().parents[1]
-spec=importlib.util.spec_from_file_location('judge',ROOT/'skills/vada-samvada/scripts/judge.py')
+spec=importlib.util.spec_from_file_location('judge',ROOT/'ke/vada-samvada/scripts/judge.py')
 judge=importlib.util.module_from_spec(spec);spec.loader.exec_module(judge)
 
 class DialogicalSkills(unittest.TestCase):
@@ -26,9 +26,21 @@ class DialogicalSkills(unittest.TestCase):
         body=self.fixture();body['assessments'][1]['score']=float('nan')
         with self.assertRaises(ValueError):judge.evaluate(body)
     def test_catalog_entries_are_self_contained_skills(self):
-        body=json.loads((ROOT/'catalog.json').read_text());self.assertEqual(len(body['skills']),8)
+        body=json.loads((ROOT/'catalog.json').read_text());self.assertEqual(len(body['skills']),9)
         for entry in body['skills']:
             text=(ROOT/entry['path']/'SKILL.md').read_text()
             self.assertTrue(text.startswith('---\nname: '+entry['name']+'\n'))
-            for section in ('Inputs and applicability','Method','Acceptance rubric','Feedback, stopping and authority'):self.assertIn(section,text)
+            self.assertEqual(entry['category'],entry['path'].split('/')[0])
+            self.assertTrue((ROOT/entry['path']/'examples').is_dir())
+            if entry['category']=='ke':
+                for section in ('Inputs and applicability','Method','Acceptance rubric','Feedback, stopping and authority'):self.assertIn(section,text)
             self.assertNotIn('../../',text)
+
+    def test_category_indexes_and_skill_example_links_resolve(self):
+        import re
+        for path in ROOT.rglob('*.md'):
+            if '.git' in path.parts or '.venv' in path.parts:continue
+            for target in re.findall(r'\]\(([^)]+)\)',path.read_text()):
+                if target.startswith(('http://','https://','#')):continue
+                self.assertTrue((path.parent/target).is_file(),str(path)+': '+target)
+        self.assertFalse((ROOT/'skills').exists());self.assertFalse((ROOT/'examples').exists())

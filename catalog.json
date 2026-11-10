@@ -3,59 +3,75 @@
   "skills": [
     {
       "name": "vada-samvada",
-      "path": "skills/vada-samvada",
+      "path": "ke/vada-samvada",
       "family": "dialogue",
       "version": "1",
-      "description": "Conduct bounded, constructive proposer\u2013examiner dialogue with explicit questions, evidence, objections and graduation criteria."
+      "description": "Conduct bounded, constructive proposer\u2013examiner dialogue with explicit questions, evidence, objections and graduation criteria.",
+      "category": "ke"
     },
     {
       "name": "vaisheshika-description",
-      "path": "skills/vaisheshika-description",
+      "path": "ke/vaisheshika-description",
       "family": "description",
       "version": "1",
-      "description": "Develop precise descriptions of entities, properties, relationships, identity and context before formal encoding."
+      "description": "Develop precise descriptions of entities, properties, relationships, identity and context before formal encoding.",
+      "category": "ke"
     },
     {
       "name": "nyaya-examination",
-      "path": "skills/nyaya-examination",
+      "path": "ke/nyaya-examination",
       "family": "reasoning",
       "version": "1",
-      "description": "Examine claims, evidence and inference using targeted questions, counterexamples and an explicit acceptance rubric."
+      "description": "Examine claims, evidence and inference using targeted questions, counterexamples and an explicit acceptance rubric.",
+      "category": "ke"
     },
     {
       "name": "evidence-grounding",
-      "path": "skills/evidence-grounding",
+      "path": "ke/evidence-grounding",
       "family": "reasoning",
       "version": "1",
-      "description": "Link individual claims to exact source evidence while distinguishing source statements, observations, inference and verification."
+      "description": "Link individual claims to exact source evidence while distinguishing source statements, observations, inference and verification.",
+      "category": "ke"
     },
     {
       "name": "draft-refinement",
-      "path": "skills/draft-refinement",
+      "path": "ke/draft-refinement",
       "family": "description",
       "version": "1",
-      "description": "Revise a shared draft in response to justified objections and human feedback without hiding unresolved disagreement."
+      "description": "Revise a shared draft in response to justified objections and human feedback without hiding unresolved disagreement.",
+      "category": "ke"
     },
     {
       "name": "rdf-formalization",
-      "path": "skills/rdf-formalization",
+      "path": "ke/rdf-formalization",
       "family": "formalization",
       "version": "1",
-      "description": "Encode examined meanings as RDF facts, ontology or constraints with a semantic round-trip explanation and explicit formalism boundaries."
+      "description": "Encode examined meanings as RDF facts, ontology or constraints with a semantic round-trip explanation and explicit formalism boundaries.",
+      "category": "ke"
     },
     {
       "name": "fact-extraction",
-      "path": "skills/fact-extraction",
+      "path": "ke/fact-extraction",
       "family": "population",
       "version": "1",
-      "description": "Extract source-grounded entity and relation assertions against an approved ontology without silently changing schema or identity."
+      "description": "Extract source-grounded entity and relation assertions against an approved ontology without silently changing schema or identity.",
+      "category": "ke"
     },
     {
       "name": "query-compilation",
-      "path": "skills/query-compilation",
+      "path": "ke/query-compilation",
       "family": "query",
       "version": "1",
-      "description": "Translate a natural-language question into an authorized query grounded in the actual ontology and entity bindings, then explain supplied execution results."
+      "description": "Translate a natural-language question into an authorized query grounded in the actual ontology and entity bindings, then explain supplied execution results.",
+      "category": "ke"
+    },
+    {
+      "name": "research-result-check",
+      "category": "research",
+      "family": "evaluation",
+      "version": "1",
+      "path": "research/research-result-check",
+      "description": "Check paired baseline and candidate measurements from an AI experiment, compute descriptive improvements across seeds, and draft a cautious result summary. Use for a quick sanity check of supplied results, not for running training or claiming statistical significance."
     }
   ]
 }
