@@ -72,6 +72,14 @@
       "version": "1",
       "path": "research/research-result-check",
       "description": "Check paired baseline and candidate measurements from an AI experiment, compute descriptive improvements across seeds, and draft a cautious result summary. Use for a quick sanity check of supplied results, not for running training or claiming statistical significance."
+    },
+    {
+      "name": "skypilot",
+      "category": "compute",
+      "family": "execution",
+      "version": "1",
+      "path": "compute/skypilot",
+      "description": "Submit and inspect experiments on explicitly selected SkyPilot compute using Bash, synchronize code and data, collect artifacts, and manage the requested cluster lifecycle. Use for SkyPilot-backed CPU or GPU jobs on Kubernetes, Slurm, or supported clouds."
     }
   ]
 }

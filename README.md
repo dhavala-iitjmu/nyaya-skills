@@ -5,7 +5,7 @@ a standalone agentic harness and reasoning framework built on TrueForge. Nyaya
 coordinates agents, tools, review and bounded workflows; this library supplies
 reusable, versioned procedures, examples and supporting scripts for those agents.
 
-The skills cover knowledge engineering and research workflows. TrueForge loads
+The skills cover knowledge engineering, research and compute workflows. TrueForge loads
 selected `SKILL.md` packs; Nyaya composes their methods into agents and workflows.
 Applications supply domain meaning, authorized tools and publication policy.
 
@@ -21,6 +21,7 @@ independent corroboration. See the [knowledge-engineering methods](ke/README.md)
 | --- | --- |
 | [ke — Knowledge engineering](ke/README.md) | Dialogue, description, examination, grounding, refinement, RDF formalization, fact extraction and query compilation |
 | [research — Research workflows](research/README.md) | Paired experimental-result checking smoke test |
+| [compute — Compute](compute/README.md) | SkyPilot job execution, code/data staging and artifact collection through Bash |
 
 Each skill lives at `<category>/<skill-name>/SKILL.md`. Examples, scripts and
 references belong inside that skill's directory so importing a single folder

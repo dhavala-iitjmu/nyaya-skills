@@ -26,7 +26,7 @@ class DialogicalSkills(unittest.TestCase):
         body=self.fixture();body['assessments'][1]['score']=float('nan')
         with self.assertRaises(ValueError):judge.evaluate(body)
     def test_catalog_entries_are_self_contained_skills(self):
-        body=json.loads((ROOT/'catalog.json').read_text());self.assertEqual(len(body['skills']),9)
+        body=json.loads((ROOT/'catalog.json').read_text());self.assertEqual(len(body['skills']),10)
         for entry in body['skills']:
             text=(ROOT/entry['path']/'SKILL.md').read_text()
             self.assertTrue(text.startswith('---\nname: '+entry['name']+'\n'))
