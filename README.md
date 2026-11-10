@@ -1,7 +1,13 @@
 # Nyaya Skills
 
-Reusable procedures imported into TrueForge and composed by Nyaya. Applications
-supply domain meaning, authorized tools and publication policy.
+The companion skill library for [Nyaya](https://github.com/dhavala-iitjmu/nyaya),
+a standalone agentic harness and reasoning framework built on TrueForge. Nyaya
+coordinates agents, tools, review and bounded workflows; this library supplies
+reusable, versioned procedures, examples and supporting scripts for those agents.
+
+The skills cover knowledge engineering and research workflows. TrueForge loads
+selected `SKILL.md` packs; Nyaya composes their methods into agents and workflows.
+Applications supply domain meaning, authorized tools and publication policy.
 
 ## Categories
 
