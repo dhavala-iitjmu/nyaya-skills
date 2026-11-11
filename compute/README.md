@@ -15,5 +15,5 @@ It establishes code/data staging, real job execution, result retrieval and reuse
 of outputs in a second job on the same cluster. It does not test cloud GPUs,
 large-data performance or persistent-volume recovery after cluster deletion.
 
-See [Nyaya's local SkyPilot tutorial](https://github.com/dhavala-iitjmu/nyaya/blob/main/docs/skypilot-local.md)
+See [Nyaya's local SkyPilot tutorial](https://github.com/dhavala-iitjmu/nyaya/blob/main/examples/tutorials/skypilot-local.md)
 for setup, invocation and observed validation results.
